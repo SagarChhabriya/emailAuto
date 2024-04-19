@@ -48,9 +48,9 @@ def mailData(email_reciever,subject,body):
         sentTime = f"{now.strftime('%a %b %d')} {now.strftime('%I:%M %p')} {now.year}"
         st.write(f"Email sent to: {email_reciever}" ,f": {sentTime}")
 
-# mailData( ) body complete
+# --------------------mailData( ) body complete
 
-# sendMail( ) body start
+# ---------------------sendMail( ) body start
 def sendMail():
 
     # read emails sheet
@@ -63,9 +63,9 @@ def sendMail():
         body    = df['body'].values[x]
         # insert mail data to be sent
         mailData(email_reciever=email, subject=subject,body=body)
+# --------------------sendMail() body complete
 
-        
-
+# UI
 st.title("Email Automater")
 uploaded_file = st.file_uploader("Choose an Excel file", type=["xlsx", "xls"])
 
@@ -97,4 +97,4 @@ except:
     st.error("Please select an excel sheet first.")
 
 
-    
+# Project Complete: RADHE RADHE 🙏🏼    
